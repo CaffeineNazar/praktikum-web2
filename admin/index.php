@@ -14,26 +14,26 @@ if ($_SESSION['username'] == '') {
     <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
     <title> Praktikum Web 2</title>
     <style>
-        body {
-            margin-bottom: 6em;
-        }
+    body {
+        margin-bottom: 6em;
+    }
 
-        * {
-            font-size: 14px;
-        }
+    * {
+        font-size: 14px;
+    }
 
-        footer {
-            position: fixed;
-            /* height: 100px; */
-            bottom: 0;
-            width: 100%;
-            background: #1fb359;
-            padding: 10px 0;
-            color: #fff;
-            font-family: Arial, Helvetica, sans -serif;
-            letter-spacing: 1.5px;
-            text-align: center;
-        }
+    footer {
+        position: fixed;
+        /* height: 100px; */
+        bottom: 0;
+        width: 100%;
+        background: #1fb359;
+        padding: 10px 0;
+        color: #fff;
+        font-family: Arial, Helvetica, sans -serif;
+        letter-spacing: 1.5px;
+        text-align: center;
+    }
     </style>
 </head>
 
@@ -94,6 +94,27 @@ if ($_SESSION['username'] == '') {
 
                     case "user-update";
                         include "../user/user_update.php";
+                        break;
+
+                    // mahasiswa
+                    case "matakuliah-show";
+                        include "../matakuliah/matakuliah_show.php";
+                        break;
+
+                    case "matakuliah-add";
+                        include "../matakuliah/matakuliah.php";
+                        break;
+
+                    case "matakuliah-edit";
+                        include "../matakuliah/matakuliah.php";
+                        break;
+
+                    case "matakuliah-delete";
+                        include "../matakuliah/matakuliah.php.php";
+                        break;
+
+                    case "matakuliah-update";
+                        include "../matakuliah/matakuliah.php";
                         break;
                 }
                 ?>
