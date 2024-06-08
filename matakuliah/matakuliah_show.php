@@ -27,11 +27,12 @@
                 ?>
                 <thead>
                     <tr>
-                        <th>Id_matkul</th>
+                        <th>no</th>
                         <th>Kode</th>
                         <th>nama</th>
                         <th>SKS</th>
                         <th>Semester</th>
+                        <th>aksi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -48,16 +49,16 @@
                         ?>
                         <tr>
                             <td><?php echo $no ?></td>
-                            <td><?php echo $data['id_matkul']; ?></td>
                             <td><?php echo $data['kode']; ?></td>
                             <td><?php echo $data['nama']; ?></td>
                             <td><?php echo $data['sks']; ?></td>
                             <td><?php echo $data['semester']; ?></td>
-                            <a class="btn btn-sm btn-success"
-                                href="?page=matakuliah-edit&id=<?php echo $data['id']; ?>">Edit</a>
-                            <a class="btn btn-sm btn-danger"
-                                href="../matakuliah/matakuliah_delete.php?id=<?php echo $data['id']; ?>"
-                                onclick="return confirm('Anda yakin mau menghapus item ini ?')">Hapus</a>
+                            <td>
+                                <a class="btn btn-sm btn-success"
+                                    href="?page=matakuliah-edit&id=<?php echo $data['id_matkul']; ?>">Edit</a>
+                                <a class="btn btn-sm btn-danger"
+                                    href="../matakuliah/matakuliah_delete.php?id=<?php echo $data['id_matkul']; ?>"
+                                    onclick="return confirm('Anda yakin mau menghapus item ini ?')">Hapus</a>
                             </td>
                         </tr>
                         <?php

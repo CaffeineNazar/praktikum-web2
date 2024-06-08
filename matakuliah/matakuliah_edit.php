@@ -3,9 +3,8 @@
 // Getting id from url
 $id = $_GET['id'];
 // Fetech user data based on id
-$result = mysqli_query($con, "SELECT * FROM matakuliah WHERE id=$id");
+$result = mysqli_query($con, "SELECT * FROM matakuliah WHERE id_matkul=$id");
 while ($data = mysqli_fetch_array($result)) {
-    $id_matkul = $data['id_matkul'];
     $kode = $data['kode'];
     $nama = $data['nama'];
     $sks = $data['sks'];
@@ -20,13 +19,6 @@ while ($data = mysqli_fetch_array($result)) {
             </div>
             <div class="card-body">
                 <form method="POST" action="?page=matakuliah-update" class="form-horizontal">
-                    <div class="form-group">
-                        <label for="id_matkul" class="col-sm-2 control-label">ID</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name="id_matkul" value="<?php echo $id_matkul; ?>"
-                                required>
-                        </div>
-                    </div>
                     <div class="form-group">
                         <label for="kode" class="col-sm-2 control-label">kode</label>
                         <div class="col-sm-10">
